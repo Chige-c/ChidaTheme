@@ -1,0 +1,16 @@
+/* --- InPlayerEpisodePreview --- */
+
+.layout-desktop  #popupFocusContainer {
+    position: absolute !important;
+    transform: translate(37%) !important;
+    width:35vw  !important;
+}
+.layout-desktop #popupFocusContainer .itemAction.paper-icon-button-light.emby-button {
+  background: rgba(0, 0, 0, 0) !important;
+}
+.layout-desktop #popupFocusContainer .itemAction.paper-icon-button-light.emby-button:hover {
+  background: rgba(0, 0, 0, 0.4) !important;
+}
+.layout-desktop #popupFocusContainer .cardOverlayButton {
+  font-size: 140%;
+}
