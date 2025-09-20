@@ -1,16 +1,16 @@
 
 /* --- MediaBar --- */
 
-/* --- 100em PC 1920px--- */
-@media only screen and (min-width: 100em) {
+/* --- 160em PC 2560px--- */
+@media only screen and (min-width: 160em) {
 #slides-container {
   margin-top: 4.8em !important;
 }
 #slides-container {
-  padding-top: 7em !important;
+  padding-top: 15.5em !important;
 }
 .sections.homeSectionsContainer {
-  margin-top: 15em !important;
+  margin-top: 15.5em !important;
 }
 .dots-container,
 .logo-container,
@@ -18,7 +18,36 @@
 .info-container,
 .genre,
 .button-container {
+  margin-top: 5.5em !important;
+}
+.arrow {
+ margin-top: -9em !important;
+}
+.favorite-button {
+  display: none;
+}
+}
+/* --- 120em PC 1920px--- */
+@media only screen and (min-width: 120em) and (max-width: 159.99em) {
+#slides-container {
+  margin-top: 4.8em !important;
+}
+#slides-container {
+  padding-top: 9em !important;
+}
+.sections.homeSectionsContainer {
   margin-top: 11em !important;
+}
+.dots-container,
+.logo-container,
+.plot-container,
+.info-container,
+.genre,
+.button-container {
+  margin-top: 5.5em !important;
+}
+.arrow {
+ margin-top: -9em !important;
 }
 .favorite-button {
   display: none;
