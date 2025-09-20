@@ -3459,7 +3459,7 @@ layout-mobile .detailPagePrimaryContent {
     .layout-mobile .detailLogo {
       display: block;
       width: 40vw;
-      left: 0em;
+      left: 4%em;
       top: 1vw;
       height: 30vh;
     }
@@ -3555,3 +3555,4 @@ layout-mobile .detailPagePrimaryContent {
      margin-top: -4.8em !important;
   }
 }
+
