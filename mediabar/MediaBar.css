@@ -1,4 +1,4 @@
-@import url(https://cdn.jsdelivr.net/gh/Chige-c/ChidaThemeV3/themeV1.css);
+
 /* --- MediaBar --- */
 
 /* --- 100em PC 1920px--- */
@@ -88,6 +88,27 @@
   margin-top: 9.3em !important;
 }
 }
+@media only screen and (min-width: 60em) and (max-width: 99.99em) and (max-height: 590.99px) and (orientation: landscape) {
+.dots-container,
+.logo-container,
+.plot-container,
+.info-container,
+.genre {
+  margin-top: 9.5em !important;
+}
+#slides-container {
+  margin-top: -10.5em !important;
+}
+.button-container {
+  margin-top: 8.5em !important;
+}
+}
+
+
+
+
+
+
 
 /*  ----- (max-width: 48em) (Ipad:横) (safariとか使うキチガイ用レイアウト)----- */
 
