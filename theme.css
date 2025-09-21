@@ -527,6 +527,164 @@ opacity:100%!important
 
 
 
+/* --- ログイン(login) --- */
+
+#loginPage h1 {
+  display: none;
+}
+#loginPage .padded-left.padded-right.padded-bottom-page {
+  margin-top: 10px;
+}
+body:has(#loginPage:not(.hide)) .material-icons.menu {
+  display: none !important;
+}
+body:has(#loginPage:not(.hide)) {
+  overflow: hidden !important;
+}
+body:not(:has(#loginPage:not(.hide))) .skinHeader {
+  display: flex !important;
+}
+
+#loginPage .readOnlyContent,
+#loginPage form {
+  max-width: 22em;
+}
+#loginPage .padded-left.padded-right.padded-bottom-page {
+  margin-top: 4em !important;
+  margin-left: auto;
+  margin-right: auto;
+  backdrop-filter: blur(1px);
+  border-radius: var(--rounding-large);
+  overflow: auto;
+}
+
+#loginPage form {
+  padding-top: 2em;
+}
+#loginPage .sectionTitle {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-bottom: 1.2em !important;
+}
+#loginPage .pageTitleWithDefaultLogo,
+.layout-mobile .detailImageContainer .card.portraitCard {
+  display: none !important;
+}
+#loginPage {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.5)),
+    url(https://cdn.jsdelivr.net/gh/MakD/zombie-release@main/img/loginImg/login.jpg);
+  background-position: top left;
+  background-size: cover;
+  background-attachment: fixed;
+  animation: 150s infinite alternate backgroundAnimation;
+  z-index: 2;
+  overflow: hidden;
+}
+#loginPage .raised.cancel.block.btnForgotPassword.emby-button {
+  display: none;
+}
+div#loginPage {
+  margin-top: 0 !important;
+}
+.manualLoginForm {
+  height: 100%;
+  width: 100%;
+}
+#loginPage .squareCard {
+  width: 33%;
+}
+/* --- 160em PC 2560px--- */
+@media only screen and (min-width: 160em) {
+  #loginPage .squareCard {
+    width: 19%;
+  }
+}
+/* --- 120em PC 1920px--- */
+@media only screen and (min-width: 120em) and (max-width: 159.99em) {
+ #loginPage .squareCard {
+    width: 20%;
+  }
+ #loginPage {
+   height: 100%;
+   background-image: linear-gradient(rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.5)),
+     url(https://cdn.jsdelivr.net/gh/Chige-c/ChidaTheme/bg/1.jpg);
+   background-position: top left;
+   background-size: cover;
+   background-attachment: fixed;
+   animation: 150s infinite alternate backgroundAnimation;
+   z-index: 2;
+   overflow: hidden;
+ }
+ #loginPage .padded-left.padded-right.padded-bottom-page {
+  margin-top: 20vh !important;
+  margin-left: auto;
+  margin-right: auto;
+  backdrop-filter: blur(1px);
+  border-radius: var(--rounding-large);
+  overflow: auto;
+}
+}
+
+/*  ----- (min-width: 60em) (Ipad:横) ----- */
+@media only screen and (min-width: 60em) and (max-width: 99.99em) and (orientation: landscape) {
+  #loginPage .squareCard {
+    width: 27%;
+  }
+  #loginPage {
+   height: 100%;
+   background-image: linear-gradient(rgb(0 0 0 / 0.3), rgb(0 0 0 / 0.3)),
+     url(https://cdn.jsdelivr.net/gh/Chige-c/ChidaTheme/bg/3.jpg);
+   background-position: -20px -10px;
+   background-size: cover;
+   background-attachment: fixed;
+   animation: 150s infinite alternate backgroundAnimation;
+   z-index: 2;
+   overflow: hidden;
+  }
+  #loginPage .padded-left.padded-right.padded-bottom-page {
+    margin-top: 18vh !important;
+  }
+}
+/*  ----- (min-width: 48em) (Ipad air:縦) ----- */
+@media only screen and (min-width: 48em) and (max-width: 59.99em) and (orientation: portrait) {
+   #loginPage .padded-left.padded-right.padded-bottom-page {
+    margin-top: 20vh !important;
+  }
+  #loginPage {
+   height: 100%;
+   background-image: linear-gradient(rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.5)),
+     url(https://cdn.jsdelivr.net/gh/Chige-c/ChidaTheme/bg/5.png);
+  background-position: center -260px;
+   background-size: cover;
+   background-attachment: fixed;
+   animation: 150s infinite alternate backgroundAnimation;
+   z-index: 2;
+   overflow: hidden;
+  }
+}
+/*  ----- (max-width: 36em) (スマホ:縦) ----- */
+@media only screen and (max-width: 35.99em) and (orientation: portrait) {
+ #loginPage {
+   height: 100%;
+   background-image: linear-gradient(rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.5)),
+     url(https://cdn.jsdelivr.net/gh/Chige-c/ChidaTheme/bg/5.png);
+   background-position: -40px ; 
+   background-size: cover;
+   background-attachment: fixed;
+   animation: 150s infinite alternate backgroundAnimation;
+   z-index: 2;
+   overflow: hidden;
+ }
+}
+/* --- (Galaxy S24) (Galaxy S24 Ultra) --- */
+@media only screen and (max-width: 35.99em) and (min-height: 42em) and (max-height: 49.99em) and (orientation: portrait) {
+  #loginPage .squareCard {
+    width: 55%;
+  }
+}
+
 
 
 
@@ -618,70 +776,7 @@ opacity:100%!important
   font-size: 0.8em;
   color: #cecece;
 }
-#loginPage h1 {
-  display: none;
-}
-#loginPage .padded-left.padded-right.padded-bottom-page {
-  margin-top: 10px;
-}
-body:has(#loginPage:not(.hide)) .skinHeader {
-  display: none !important;
-}
-body:has(#loginPage:not(.hide)) {
-  overflow: hidden !important;
-}
-body:not(:has(#loginPage:not(.hide))) .skinHeader {
-  display: flex !important;
-}
-#loginPage .readOnlyContent,
-#loginPage form {
-  max-width: 22em;
-}
-#loginPage .padded-left.padded-right.padded-bottom-page {
-  margin-top: 4em !important;
-  margin-left: auto;
-  margin-right: auto;
-  backdrop-filter: blur(1px);
-  border-radius: var(--rounding-large);
-  overflow: auto;
-}
-#loginPage .squareCard {
-  width: 33%;
-}
-#loginPage form {
-  padding-top: 2em;
-}
-#loginPage .sectionTitle {
-  margin-left: auto !important;
-  margin-right: auto !important;
-  margin-bottom: 1.2em !important;
-}
-#loginPage .pageTitleWithDefaultLogo,
-.layout-mobile .detailImageContainer .card.portraitCard {
-  display: none !important;
-}
-#loginPage {
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.5)),
-    url(https://cdn.jsdelivr.net/gh/MakD/zombie-release@main/img/loginImg/login.jpg);
-  background-position: top left;
-  background-size: cover;
-  background-attachment: fixed;
-  animation: 150s infinite alternate backgroundAnimation;
-  z-index: 2;
-  overflow: hidden;
-}
-#loginPage .raised.cancel.block.btnForgotPassword.emby-button {
-  display: none;
-}
-div#loginPage {
-  margin-top: 0 !important;
-}
-.manualLoginForm {
-  height: 100%;
-  width: 100%;
-}
+
 .layout-mobile .listItem-content .listItemImage-large {
   -webkit-tap-highlight-color: #fff0;
 }
@@ -3459,7 +3554,7 @@ layout-mobile .detailPagePrimaryContent {
     .layout-mobile .detailLogo {
       display: block;
       width: 40vw;
-      left: 4%em;
+      left: 0em;
       top: 1vw;
       height: 30vh;
     }
@@ -3555,4 +3650,3 @@ layout-mobile .detailPagePrimaryContent {
      margin-top: -4.8em !important;
   }
 }
-
