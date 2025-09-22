@@ -398,34 +398,33 @@
 /* --- (Galaxy S24) (Galaxy S24 Ultra) --- */
 @media only screen and (max-width: 35.99em) and (min-height: 42em) and (max-height: 49.99em) and (orientation: portrait) {
 .logo-container {
-  margin-top: 3.5em !important;
+  margin-top: 2.6em !important;
   left: 28vw;
   width: 55vw;
 }
 .dots-container {
-  margin-top: 9em !important;
+  margin-top: 5.1em !important;
 }
 #slides-container .backdrop.high-quality.animate {
-  height: 30em !important;
+  height: 30vh !important;
   margin-top: 21.5em !important;
 }
 
 #slides-container {
-  margin-top: -15em !important;
+  margin-top: -14.5em !important;
 }
 .sections.homeSectionsContainer {
-  margin-top: -13em;
+  margin-top: -17em;
 }
 
-.genre,
-.info-container {
-  margin-top: 6.5em;
+.genre {
+  margin-top: 1.5em;
 }
 .button-container {
-  margin-top: 2.3em;
+  margin-top: -1.5em;
 }
 #slides-container .arrow  {
-  margin-top: 12em;
+  margin-top: 8.5em;
 }
 .button-container .detailButton.detail-button  {
   height: 40px;
@@ -438,16 +437,12 @@
   display: none !important;
 }
 .info-container .runTime,
-.favorite-button {
+.favorite-button,
+.info-container {
   display: none !important;
 } 
 }
-@media only screen and (max-width: 35.99em) and (min-height: 42em) and (max-height: 47.99em) and (orientation: portrait) {
-  .dots-container,
-  .button-container {
-  margin-top: 3em;
-}
-}
+
 
 
 /* --- (iPhone SE) --- */
