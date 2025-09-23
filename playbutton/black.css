@@ -1,0 +1,17 @@
+:root {
+  --border-color: linear-gradient(45deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 41%, rgba(255, 255, 255, 0.1) 57%, rgba(255, 255, 255, 0.3) 100%);
+  --card-bg: #101010;
+}
+.layout-desktop .detailPagePrimaryContainer .mainDetailButtons .btnPlay::after {
+  content: attr(title);
+  margin: 1px 11px 0 2px;
+  color: rgba(var(--accent)) !important;
+}
+.layout-desktop .material-icons.detailButton-icon.play_arrow {
+  color: rgba(var(--accent)) !important;
+}
+.layout-desktop .detailPagePrimaryContainer .mainDetailButtons .btnPlay {
+    background: linear-gradient(var(--card-bg), var(--card-bg)) padding-box, var(--border-color) border-box !important;
+    border: 1px solid transparent;
+    border-radius: 2em;
+}
