@@ -23,6 +23,8 @@ h4 {
   --rounding-alt: 9px;
   --rounding-large: 24px;
   --rounding-circle: 100px;
+  --bg-color: #18181849;
+  --blur: blur(16px) saturate(180%);
 }
 .listItem .paper-icon-button-light,
 .paper-icon-button-light:hover {
@@ -1420,6 +1422,8 @@ a[href*="anidb.net"] {
   margin: 1px 11px 0 2px;
   color: rgba(var(--darkest));
 }
+
+
 .layout-mobile .detailPagePrimaryContainer .mainDetailButtons .btnPlay::after {
   content: attr(title);
   margin: 1px 11px 0 2px;
@@ -3094,7 +3098,7 @@ layout-mobile .detailPagePrimaryContent {
       margin-left: -0.1em !important;
 }
 .layout-mobile .skinHeader {
-  background-color: rgba(var(--darkest), 1) !important;
+  background-color: black !important;
 }
 .layout-mobile .raised {
   background: rgba(var(--accent),0.96) !important;
