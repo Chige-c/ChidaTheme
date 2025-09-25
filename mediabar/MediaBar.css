@@ -1,6 +1,23 @@
 
 /* --- MediaBar --- */
 
+
+/* --- 画像を明るくする --- */
+.backdrop-overlay {
+  background-color: rgba(0, 0, 0, 0);
+}
+.backdrop-container {
+    filter: brightness(0.999);
+}
+/* --- 画像のアップ無効 --- */
+@keyframes kenBurnsZoomIn {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 /* --- 160em PC 2560px--- */
 @media only screen and (min-width: 160em) {
 #slides-container {
@@ -20,15 +37,16 @@
 .button-container {
   margin-top: 5.5em !important;
 }
-.arrow {
+#slides-container .arrow {
  margin-top: -9em !important;
 }
 .favorite-button {
   display: none;
 }
 }
+
 /* --- 120em PC 1920px--- */
-@media only screen and (min-width: 120em) and (max-width: 159.99em) {
+@media only screen and (min-width: 100em) and (max-width: 159.99em) {
 #slides-container {
   margin-top: 4.8em !important;
 }
@@ -52,6 +70,7 @@
 .favorite-button {
   display: none;
 }
+
 }
 
 /*  ----- (min-width: 60em) (Ipad:横) ----- */
