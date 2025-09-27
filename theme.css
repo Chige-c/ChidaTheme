@@ -530,6 +530,10 @@ opacity:100%!important
 
 
 /* --- ログイン(login) --- */
+#loginPage .card:hover {
+ transform:none !important;
+ box-shadow:none;
+}
 
 #loginPage h1 {
   display: none;
