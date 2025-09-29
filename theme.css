@@ -3107,7 +3107,9 @@ layout-mobile .detailPagePrimaryContent {
 .layout-mobile .raised {
   background: rgba(var(--accent),0.96) !important;
 }
-
+.layout-mobile .detailPageWrapperContainer #emby-ratingbutton {
+  display: block !important;
+}
 /* CSS rules for screen sizes larger than 110em */
   @media all and (min-width: 105.01em){
     .layout-mobile .listItemImage.listItemImage-large.itemAction.lazy {
@@ -3658,3 +3660,4 @@ layout-mobile .detailPagePrimaryContent {
      margin-top: -4.8em !important;
   }
 }
+
