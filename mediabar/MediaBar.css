@@ -9,6 +9,9 @@
 .backdrop-container {
     filter: brightness(0.999);
 }
+.section0 .emby-scrollbuttons.padded-right {
+   margin-top: -0.7em !important;
+}
 /* --- 画像のアップ無効 --- */
 @keyframes kenBurnsZoomIn {
   from {
@@ -514,4 +517,5 @@
   display: none !important;
 } 
 }
+
 
