@@ -276,6 +276,7 @@
 }
 
 
+
 /*  ----- (min-width: 36em) and (max-width: 47.99em) (Ipad:縦) ----- */
 
 
@@ -314,6 +315,7 @@
 }
 
 
+/*  ----- (スマホ) ----- */
 
 
 /*  ----- max-width: 35.99em (スマホ:縦) ----- */
@@ -329,7 +331,7 @@
   margin-top: 9em !important;
 }
 #slides-container .backdrop.high-quality.animate {
-  height: 30em !important;
+  height: 50vh !important;
   margin-top: 21.5em !important;
 }
 
@@ -377,7 +379,7 @@
   margin-top: 9em !important;
 }
 #slides-container .backdrop.high-quality.animate {
-  height: 30em !important;
+  height: 48vh !important;
   margin-top: 21.5em !important;
 }
 
@@ -475,7 +477,7 @@
   margin-top: 9em !important;
 }
 #slides-container .backdrop.high-quality.animate {
-  height: 30em !important;
+  height: 45vh !important;
   margin-top: 21.5em !important;
 }
 
@@ -483,7 +485,7 @@
   margin-top: -15em !important;
 }
 .sections.homeSectionsContainer {
-  margin-top: -13em;
+  margin-top: -15em;
 }
 
 .genre,
