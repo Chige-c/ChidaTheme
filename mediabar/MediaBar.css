@@ -1,6 +1,17 @@
 
 /* --- MediaBar --- */
 
+/* --- ロゴ --- */
+@media only screen and (min-width: 160em) {
+ .bar-loading h1 img {
+   width: 45vw;
+}
+}
+@media only screen and (min-width: 100em) and (max-width: 159.99em) {
+ .bar-loading h1 img {
+   width: 40vw;
+}
+}
 
 /* --- 画像を明るくする --- */
 .backdrop-overlay {
@@ -9,12 +20,15 @@
 .backdrop-container {
     filter: brightness(0.999);
 }
+
 .section0 .emby-scrollbuttons.padded-right {
    margin-top: -0.7em !important;
 }
+
 .card,.homeLibraryButton {
    margin-right:10px
 }
+
 /* --- 画像のアップ無効 --- */
 @keyframes kenBurnsZoomIn {
   from {
@@ -520,6 +534,5 @@
   display: none !important;
 } 
 }
-
 
 
