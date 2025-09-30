@@ -12,6 +12,9 @@
 .section0 .emby-scrollbuttons.padded-right {
    margin-top: -0.7em !important;
 }
+.card,.homeLibraryButton {
+   margin-right:10px
+}
 /* --- 画像のアップ無効 --- */
 @keyframes kenBurnsZoomIn {
   from {
@@ -517,5 +520,6 @@
   display: none !important;
 } 
 }
+
 
 
