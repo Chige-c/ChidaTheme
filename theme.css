@@ -244,7 +244,7 @@ opacity:100%!important
   opacity: 1;
 }
 .layout-desktop .headerTop {
-   font-size: 110%;
+   font-size: 125%;
 } 
 @media (min-width: 120em) {
   .layout-desktop .overflowPortraitCard, .layout-desktop .overflowSquareCard {
