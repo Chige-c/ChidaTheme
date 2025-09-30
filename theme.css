@@ -274,7 +274,9 @@ opacity:100%!important
 .sliderBubbleText {
   display: none !important;
 }
-
+.section0 .emby-scrollbuttons.padded-right {
+   margin-top: -0.7em !important;
+}
 
 .emby-scrollbuttons.padded-right {
    font-size: 140% !important;
