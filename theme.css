@@ -2732,7 +2732,19 @@ fieldset {
   margin-right: 0.6em;
 }
 .sectionTitleTextButton > .material-icons.chevron_right {
-  display: none;
+  margin-bottom: 0.25em;
+  margin-top: 0.35em;
+  margin-left: 0em;
+  margin-right: 0em;
+}
+.sectionTitleTextButton > .material-icons.chevron_right:before {
+  font-size: 120%;
+}
+.layout-mobile .sectionTitleTextButton > .material-icons.chevron_right:before {
+  margin-bottom: 0.86em;
+  margin-top: 0em;
+  margin-left: -0.5em;
+  margin-right: 0em;
 }
 .homePage .sectionTitleTextButton {
   left: -0.6em;
