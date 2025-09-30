@@ -1,15 +1,19 @@
 
 /* --- MediaBar --- */
 
+/* --- ヘッダー --- */
+.layout-desktop .headerTop {
+   font-size: 110% !important;
+} 
 /* --- ロゴ --- */
 @media only screen and (min-width: 160em) {
  .bar-loading h1 img {
-   width: 40vw;
+   width: 45vw;
 }
 }
 @media only screen and (min-width: 100em) and (max-width: 159.99em) {
  .bar-loading h1 img {
-   width: 35vw;
+   width: 40vw;
 }
 }
 
@@ -534,6 +538,5 @@
   display: none !important;
 } 
 }
-
 
 
