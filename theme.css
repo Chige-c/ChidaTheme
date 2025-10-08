@@ -343,7 +343,7 @@ opacity:100%!important
     align-items: center;
     margin: unset !important;
     position: relative;
-    left: -18px;
+    left: -5px;
   }
 
   .layout-desktop .detailPageContent {
@@ -424,6 +424,7 @@ opacity:100%!important
     display: none;
   }
 }
+
 @media all and (max-width: 1119.99px) {
   .layout-desktop .detailPagePrimaryContainer {
     display: inline-table;
@@ -531,6 +532,9 @@ opacity:100%!important
 
 /*商品の詳細ページにロゴが表示されている場合は、商品のタイトルを非表示にします*/
 #itemDetailPage .itemName.infoText.parentNameLast > bdi:nth-child(1) {
+  display: none;
+}
+#itemDetailPage .itemName.infoText.originalTitle {
   display: none;
 }
 .hide+.detailPageWrapperContainer .itemName > bdi:nth-child(1) {
