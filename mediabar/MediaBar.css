@@ -1,6 +1,46 @@
 
 /* --- MediaBar --- */
 
+
+/* --- 上のやつ --- */
+.gradient-overlay {
+  background: linear-gradient(
+    130deg,
+    rgba(19, 19, 19, 0.65) 10%,
+    rgba(29, 29, 29, 0.35) 30%,
+    rgba(29, 29, 29, 0) 100%
+  ) !important;
+}
+.backdrop-container {
+  mask-image: linear-gradient(
+    to bottom,
+    #fff0 1%,
+    rgb(0 0 0 / 0.5) 3.5%,
+    #000000 5.5%
+  )!important;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #fff0 1%,
+    rgb(0 0 0 / 0.5) 3.5%,
+    #000000 5.5%
+  )!important;
+}
+.backdrop-container {
+  mask-image: linear-gradient(
+    to bottom,
+    #fff0 1%,
+    rgb(0 0 0 / 0.5) 3.5%,
+    #000000 5.5%
+  )!important;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #fff0 1%,
+    rgb(0 0 0 / 0.5) 3.5%,
+    #000000 5.5%
+  )!important;
+}
+
+
 /* --- ヘッダー --- */
 .layout-desktop .headerTop {
    font-size: 110% !important;
@@ -17,12 +57,13 @@
 }
 }
 
+
 /* --- 画像を明るくする --- */
 .backdrop-overlay {
   background-color: rgba(0, 0, 0, 0);
 }
 .backdrop-container {
-    filter: brightness(0.999);
+  filter: brightness(0.999);
 }
 
 .section0 .emby-scrollbuttons.padded-right {
@@ -42,16 +83,21 @@
     transform: scale(1);
   }
 }
+
+
+
+
 /* --- 160em PC 2560px--- */
 @media only screen and (min-width: 160em) {
 #slides-container {
   margin-top: 4.8em !important;
 }
+
 #slides-container {
   padding-top: 15.5em !important;
 }
 .sections.homeSectionsContainer {
-  margin-top: 15.5em !important;
+  margin-top: 27em !important;
 }
 .dots-container,
 .logo-container,
@@ -59,15 +105,18 @@
 .info-container,
 .genre,
 .button-container {
-  margin-top: 5.5em !important;
+  margin-top: 16.5em !important;
 }
 #slides-container .arrow {
- margin-top: -9em !important;
+ margin-top: -0em !important;
 }
 .favorite-button {
   display: none;
 }
 }
+
+
+
 
 /* --- 120em PC 1920px--- */
 @media only screen and (min-width: 100em) and (max-width: 159.99em) {
@@ -94,10 +143,53 @@
 .favorite-button {
   display: none;
 }
-
+}
+/*  ----- (min-width: 64em) (Ipad 12.9~13インチ:縦) ----- */
+@media only screen and (min-width: 64em) and (max-width: 64.9em) and (orientation: portrait) {
+#slides-container .backdrop.high-quality.animate {
+  width: 100vw;
+  height: 50vh;
+  margin-top: 27em !important;
+}
+.dots-container,
+.plot-container,
+.info-container,
+.genre {
+  margin-top: 8em !important;
+}
+.logo-container  {
+  margin-top: 14em !important;
+  width: 33vw;
+}
+.dots-container,
+.plot-container,
+.info-container,
+.genre {
+  font-size: 100% !important;
+}
+.button-container {
+  margin-top: 5em !important;
+}
+.arrow.left-arrow,
+.arrow.right-arrow {
+  margin-top: 7em !important;
+}
+.dots-container {
+  left: 49%;
+}
+#slides-container {
+  margin-top: -23em !important;
+}
+.sections.homeSectionsContainer {
+  margin-top: -20em !important;
+}
+.favorite-button {
+  display: none;
+}
 }
 
-/*  ----- (min-width: 60em) (Ipad:横) ----- */
+
+/*  ----- (min-width: 60em) (Ipad 11インチ:横) ----- */
 
 @media only screen and (min-width: 60em) and (max-width: 99.99em) and (min-height: 767px) and (orientation: landscape) {
 .dots-container,
@@ -182,7 +274,7 @@
 
 
 
-/*  ----- (max-width: 48em) (Ipad:横) (safariとか使うキチガイ用レイアウト)----- */
+/*  ----- (max-width: 48em) (Ipad　11インチ:横) (safariとか使うキチガイ用レイアウト)----- */
 
 @media only screen and (min-width: 48em) and (max-width: 59.99em) and (max-height: 59.99em) and (orientation: landscape) {
 .dots-container,
@@ -221,7 +313,7 @@
 
 
 
-/*  ----- (min-width: 48em) (Ipad air:縦) ----- */
+/*  ----- (min-width: 48em) (Ipad 11インチ:縦) ----- */
 
 @media only screen and (min-width: 48em) and (max-width: 59.99em) and (min-height: 56em) and (orientation: portrait) {
 
@@ -301,7 +393,7 @@
 
 
 
-/*  ----- (min-width: 36em) and (max-width: 47.99em) (Ipad:縦) ----- */
+/*  ----- (min-width: 36em) and (max-width: 47.99em) (Ipad 9.7インチ:縦) ----- */
 
 
 @media only screen and (min-width: 36em) and (max-width: 47.99em)  {
@@ -443,34 +535,33 @@
 /* --- (Galaxy S24) (Galaxy S24 Ultra) --- */
 @media only screen and (max-width: 35.99em) and (min-height: 42em) and (max-height: 49.99em) and (orientation: portrait) {
 .logo-container {
-  margin-top: 2.6em !important;
+  margin-top: 7em !important;
   left: 28vw;
-  width: 55vw;
+  width: 50vw;
 }
 .dots-container {
   margin-top: 5.1em !important;
 }
 #slides-container .backdrop.high-quality.animate {
   height: 32vh !important;
-  margin-top: 21.5em !important;
+  margin-top: 21em !important;
 }
 
 #slides-container {
-  margin-top: -14.5em !important;
+  margin-top: -14em !important;
 }
 .sections.homeSectionsContainer {
-  margin-top: -17em;
+  margin-top: -16em;
 }
 
 .genre {
   margin-top: 1.5em;
 }
 .button-container {
-  margin-top: -1.5em;
+  margin-top: -2em;
+  left: 23vw;
 }
-#slides-container .arrow  {
-  margin-top: 8.5em;
-}
+
 .button-container .detailButton.detail-button  {
   height: 40px;
   width: 40px;
@@ -483,7 +574,9 @@
 }
 .info-container .runTime,
 .favorite-button,
-.info-container {
+.info-container,
+.genre,
+#slides-container .arrow {
   display: none !important;
 } 
 }
