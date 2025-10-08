@@ -1,0 +1,27 @@
+.quality-overlay-container .quality-overlay-label[data-quality="4K"] {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    color: rgba(218, 165, 32, 1) !important;
+}
+.quality-overlay-container .quality-overlay-label[data-quality="1080p"] {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    color: var(--accent) !important;
+}
+.quality-overlay-label[data-quality="1080p"] {
+    background: linear-gradient(45deg, #c0392b, #e74c3c) !important;
+    color: white !important;
+    order: -1; /* Appear first */
+}
+.layout-desktop .watchlist-icon::after {
+   content: attr(title);
+}
+.layout-desktop .btnMoreCommands {
+   order: 2 !important;
+}
+.layout-desktop .watchlist-icon {
+   order: 1 !important;
+}
+@media all and (min-width: 1120px) {
+   .btnPlaystate.detailButton {
+    display: none !important;
+  }
+}
