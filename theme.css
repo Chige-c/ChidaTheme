@@ -312,118 +312,144 @@ opacity:100%!important
    margin-top: -20px !important;
 }
 @media all and (min-width: 1120px) {
-    :root {
-  /* --- Base Colors --- */
-  
-  /* --- Layout & Sizing --- */
-       --detail-page-side-padding: 5%; /* Padding on the sides of detail pages */
-       --detail-page-primary-width: 45%; /* Width of the primary content area on desktop detail pages */
-       --detail-page-backdrop-offset: 17%; /* Offset for the backdrop image */
-       --detail-page-backdrop-width: 85vw; /* Width of the backdrop container */
-       --detail-page-mask-offset: 16%; /* Start mask slightly before backdrop */
-       --detail-page-mask-width: 85vw; /* Make mask slightly wider than backdrop */
-       --detail-page-content-offset: -65vh; /* Vertical offset for content */
-    }
+:root {
+  --bg-color: #18181849;
+  --blur: blur(16px) saturate(180%);
+  --border-color: linear-gradient(45deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 41%, rgba(255, 255, 255, 0.1) 57%, rgba(255, 255, 255, 0.3) 100%);
+  --card-bg: #101010;
+  --indicator-bg: #10101094;
+  --transparent-bg: #10101000;
+}
 }
 
 @media all and (min-width: 1120px) {
 
-/* --- Layout Containers --- */
-  .layout-desktop .detailPagePrimaryContainer {
-    background-color: var(--transparent-bg);
-    display: inline-table;
-    left: var(--detail-page-side-padding);
-    padding-left: var(--detail-page-side-padding);
-    z-index: 2; /* Above backdrop/mask */
-    position: relative;
-  }
+/* Elements with transparency and blur effects */
+.mainDrawer,
+.actionSheet,
+select:enabled,
+option {
+  background-color: var(--bg-color);
+  backdrop-filter: var(--blur) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
 
-  .mainDetailButtons { /* Container for main action buttons (Play, Favorite, etc.) */
-    display: flex;
-    align-items: center;
-    margin: unset !important;
-    position: relative;
-    left: -5px;
-  }
-
-  .layout-desktop .detailPageContent {
-    padding-left: var(--detail-page-side-padding);
-  }
-
-  .layout-desktop .detailPagePrimaryContent {
-    width: var(--detail-page-primary-width);
-  }
-
-  .layout-desktop .detailPageSecondaryContainer {
-    background-color: var(--transparent-bg);
-    padding-top: 0 !important; /* remove padding between buttons and description on a show page */
-  }
-
-  .layout-desktop .itemDetailsGroup {
-    margin-top: 0;
-  }
-
-/* --- Backdrop, Logo & Mask --- */
-  .layout-desktop .detailLogo {
+}
+.layout-desktop .detailLogo {
     background-position: top left;
-    left: var(--detail-page-side-padding);
+    left: 5%;
     top: 16vh;
     position: absolute;
     z-index: 3;
-  }
-
-  .backdropContainer {
-    height: 100vh;
-    left: var(--detail-page-backdrop-offset);
-    position: absolute;
-    top: 0;
-    width: var(--detail-page-backdrop-width);
-    z-index: 0;
-    pointer-events: none;
-  }
-
-  .layout-desktop .itemBackdrop {
-    background-attachment: scroll;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
-  }
-
-  .layout-desktop .backgroundContainer.withBackdrop {
-    background: url("https://cdn.jsdelivr.net/gh/Chige-c/ChidaTheme/img/mask.png");
-    background-size: cover;
-    height: 100vh;
-    left: var(--detail-page-mask-offset);
-    position: absolute;
-    top: 0;
-    width: var(--detail-page-mask-width);
-    z-index: 1; /* Between backdrop and content */
-    pointer-events: none; /* Allow clicks to pass through */
-  }
-  .backgroundContainer.withBackdrop {
-    background-color: rgba(var(--accent), 0.06) !important;
-  }
-
-  .layout-desktop .detailPageWrapperContainer {
-    margin-top: var(--detail-page-content-offset);
-    position: relative;
-    z-index: 2; /* Ensure content is above mask */
-  }
-  .layout-desktop .detailLogo {
+}
+.layout-desktop .detailLogo {
     height: 21vh;
     position: absolute;
     right: 25vw;
     top: 10vh;
     width: 30vw;
-  }
-
-/* --- Element Hiding on Detail Page --- */
-  .layout-desktop .detailImageContainer .card {
-    display: none;
-  }
 }
+.mainDetailButtons { /* Container for main action buttons (Play, Favorite, etc.) */
+    margin: unset !important;
+}
+.detailPageSecondaryContainer {
+    padding-top: 0em !important;
+}
+/* Primary content styling */
+.layout-desktop .detailPagePrimaryContainer {
+  background-color: var(--transparent-bg);
+  display: inline-table;
+  left: 5%;
+  padding-left: 5%;
+  z-index: 2;
+}
+
+/* Layout adjustments for desktop */
+.layout-desktop .detailPageContent {
+  padding-left: 5%;
+}
+
+.layout-desktop .detailPagePrimaryContent {
+  width: 45%;
+}
+
+.layout-desktop .detailPageSecondaryContainer {
+  background-color: var(--transparent-bg);
+  margin: 0 0 1.25em 0;
+}
+
+.layout-desktop .itemDetailsGroup {
+  margin-top: 0;
+}
+
+/* Desktop background settings */
+html.preload.layout-desktop {
+  background-color: #000000;
+}
+html.preload.layout-mobile {
+  background-color: #000000;
+}
+
+.layout-desktop .itemBackdrop {
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  right: -20%;
+  width: 80vw;
+}
+
+.emby-select-withcolor:focus {
+  border-color: var(--accent) !important;
+}
+
+/* Backdrop container */
+.backdropContainer {
+  height: 100vh;
+  left: 20%;
+  position: absolute;
+  width: 80vw;
+}
+
+
+
+
+
+.layout-desktop .backgroundContainer {
+  background:
+    linear-gradient(90deg, rgb(0, 0, 0), rgba(0, 0, 0, 0) 60%),
+    linear-gradient(360deg, rgb(0, 0, 0), rgba(0, 0, 0, 0) 60%);
+  background-size: cover;
+  height: 100vh;
+  margin-left: 20%;
+  position: absolute;
+  width: 80vw;
+}
+.layout-mobile .backgroundContainer {
+  background:
+    linear-gradient(90deg, rgb(0, 0, 0), rgba(0, 0, 0, 1) 160%),
+    linear-gradient(360deg, rgb(0, 0, 0), rgba(0, 0, 0, 1) 160%);
+  background-size: cover;
+  height: 100vh;
+  margin-left: 20%;
+  position: absolute;
+  width: 80vw;
+}
+
+.layout-desktop .detailPageWrapperContainer {
+  margin-top: -65vh;
+}
+
+/* Hide unnecessary elements */
+.layout-desktop .detailImageContainer .card {
+  display: none;
+}
+}
+
+
+
+
 
 @media all and (max-width: 1119.99px) {
   .layout-desktop .detailPagePrimaryContainer {
@@ -485,6 +511,9 @@ opacity:100%!important
   .layout-desktop .backgroundContainer.withBackdrop {
     background: url("https://raw.githubusercontent.com/prism2001/finity/main/minimal/mask-minimal.png");
       no-repeat center center;
+  }
+  .backgroundContainer {
+    background-color: black !important;
   }
 }
 .button-flat.btnReplay.detailButton.emby-button {
@@ -747,9 +776,7 @@ div#loginPage {
 
 
 
-.backgroundContainer {
-  background-color: black !important;
-}
+
 * {
   scrollbar-width: none;
 }
@@ -806,24 +833,14 @@ div#loginPage {
   -webkit-tap-highlight-color: #fff0;
   width: 80vw;
 }
-.backdropImage {
-  filter: blur(4px) saturate(115%) contrast(115%) brightness(70%);
-  animation: 0.2s ease-in-out both backdrop-fadein;
-  height: 99%;
-}
-.layout-mobile .backgroundContainer,
-.layout-desktop .backgroundContainer {
-  background: url()
-    no-repeat center center;
-}
+
+
 
 .sectionTitleContainer-cards {
   margin: 0;
   padding-top: 1.25em;
 }
-.layout-desktop .trackSelections .selectContainer .detailTrackSelect {
-  width: 24.5vw;
-}
+
 .layout-desktop .trackSelections {
   display: block;
 }
@@ -1420,11 +1437,7 @@ a[href*="anidb.net"] {
 .layout-desktop .btntheaters::after {
   content: attr(title);
 }
-.emby-select-withcolor {
-  color: inherit;
-  background: #fff0;
-  border: #fff0;
-}
+
 .layout-desktop .btnPlay {
   background-color: rgb(var(--white));
   color: rgb(var(--darkest)) !important;
@@ -2650,8 +2663,7 @@ fieldset {
   border: 1px solid rgba(var(--accent), 0.3);
 }
 .emby-input,
-.emby-textarea,
-.emby-select-withcolor {
+.emby-textarea {
   border: none !important;
 }
 .checkboxOutline {
