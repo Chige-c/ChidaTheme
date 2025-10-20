@@ -15,14 +15,14 @@
   mask-image: linear-gradient(
     to bottom,
     #fff0 1%,
-    rgb(0 0 0 / 0.5) 3.5%,
-    #000000 5.5%
+    rgb(0 0 0 / 0.5) 2%,
+    #000000 3.5%
   )!important;
   -webkit-mask-image: linear-gradient(
     to bottom,
     #fff0 1%,
-    rgb(0 0 0 / 0.5) 3.5%,
-    #000000 5.5%
+    rgb(0 0 0 / 0.5) 2%,
+    #000000 3.5%
   )!important;
 }
 
@@ -624,5 +624,6 @@
   display: none !important;
 } 
 }
+
 
 
