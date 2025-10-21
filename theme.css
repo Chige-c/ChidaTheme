@@ -44,7 +44,7 @@ h4 {
 .button-link{
   color: rgba(0, 0, 0, 0.9) !important;
 }
-.layout-desktop.cardOverlayButton.cardOverlayButton-hover.itemAction.paper-icon-button-light.cardOverlayFab-primary {
+.layout-desktop .cardOverlayButton.cardOverlayButton-hover.itemAction.paper-icon-button-light.cardOverlayFab-primary {
   background-color: rgba(0, 0, 0, 0.4) !important;
 }
 .mediaSourceIndicator {
@@ -63,7 +63,7 @@ h4 {
 -webkit-filter:none!important;
 box-shadow:0 0 20px #000;
 filter:none!important;
-transform:scale(1.15)!important
+transform:scale(1.1)!important
 }
 .activeDevices .card {
   transform: none !important;
@@ -325,15 +325,7 @@ opacity:100%!important
 @media all and (min-width: 1120px) {
 
 /* Elements with transparency and blur effects */
-.mainDrawer,
-.actionSheet,
-select:enabled,
-option {
-  background-color: var(--bg-color);
-  backdrop-filter: var(--blur) !important;
-  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
 
-}
 .layout-desktop .detailLogo {
     background-position: top left;
     left: 5%;
@@ -400,9 +392,7 @@ html.preload.layout-mobile {
   width: 80vw;
 }
 
-.emby-select-withcolor:focus {
-  border-color: var(--accent) !important;
-}
+
 
 /* Backdrop container */
 .backdropContainer {
@@ -521,6 +511,22 @@ html.preload.layout-mobile {
 }
 
 
+/*字幕とかオーディオの選択のやつ*/
+.emby-select-withcolor:focus {
+  border-color: var(--accent) !important;
+}
+.mainDrawer,
+.actionSheet,
+select:enabled,
+option {
+  background-color: var(--bg-color);
+  backdrop-filter: var(--blur) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+
+}
+
+
+
 .layout-desktop .listItem-content .listItemImage-large {
   height: 12vw !important;
   width: 20vw !important;
@@ -560,19 +566,26 @@ html.preload.layout-mobile {
 }
 
 /*商品の詳細ページにロゴが表示されている場合は、商品のタイトルを非表示にします*/
-#itemDetailPage .itemName.infoText.parentNameLast > bdi:nth-child(1) {
+.layout-desktop #itemDetailPage .itemName.infoText.parentNameLast > bdi:nth-child(1) {
   display: none;
 }
-#itemDetailPage .itemName.infoText.originalTitle {
+.layout-desktop #itemDetailPage .itemName.infoText.originalTitle {
   display: none;
 }
-.hide+.detailPageWrapperContainer .itemName > bdi:nth-child(1) {
+.layout-desktop .hide+.detailPageWrapperContainer .itemName > bdi:nth-child(1) {
   display: block !important;
 }
 
 /*単一のエピソードのリンクバックタイトルにも同じことを行います*/
 #itemDetailPage .parentName > bdi:nth-child(1) {display: none;}
 .hide+.parentName > bdi:nth-child(1) {display: block !important;}
+
+.layout-desktop #itemDetailPage .itemName.infoText.parentNameLast {
+  font-size: 2.8em !important;
+}
+
+
+
 
 /* --- ログイン(login) --- */
 #loginPage .card:hover {
@@ -780,18 +793,7 @@ div#loginPage {
 * {
   scrollbar-width: none;
 }
-.layout-mobile #itemDetailPage .itemName.infoText.parentNameLast > bdi:nth-child(1) {
-  display: none;
-}
-.layout-mobile .hide + .detailPageWrapperContainer .itemName > bdi:nth-child(1) {
-  display: block !important;
-}
-.layout-mobile #itemDetailPage .parentName > bdi:nth-child(1) {
-  display: none;
-}
-.layout-mobile .hide + .parentName > bdi:nth-child(1) {
-  display: block !important;
-}
+
 .navMenuOption::before {
   content: "" !important;
   width: 5px !important;
@@ -1383,15 +1385,7 @@ a[href*="anidb.net"] {
   padding-top: 1.2em;
 }
 
-@media (orientation: portrait) {
-   .detailLogo {
-   height: 30vh;
-   position: absolute;
-   right: 25vw;
-   top: 15vh;
-   width: 34em;
-  }
-}
+
 .layout-desktop .trackSelections .selectContainer {
   align-items: center;
 }
@@ -2876,12 +2870,7 @@ fieldset {
 .layout-mobile .detailImageContainer .card.portraitCard {
   display: none !important;
 }
-.layout-mobile .detailLogo {
-  display: block;
-  width: 15em;
-  left: 4%;
-  top: 25vw;
-}
+
 
 .detailRibbon {
   background: #fff0;
@@ -3157,6 +3146,22 @@ layout-mobile .detailPagePrimaryContent {
 .layout-mobile .detailPageWrapperContainer #emby-ratingbutton {
   display: block !important;
 }
+.layout-mobile .detailLogo {
+  display: block;
+  width: 15em;
+  left: 4%;
+  top: 25vw;
+}
+@media (orientation: portrait) {
+   .detailLogo {
+   height: 30vh;
+   position: absolute;
+   right: 25vw;
+   top: 15vh;
+   width: 34em;
+  }
+}
+
 /* CSS rules for screen sizes larger than 110em */
   @media all and (min-width: 105.01em){
     .layout-mobile .listItemImage.listItemImage-large.itemAction.lazy {
@@ -3209,6 +3214,13 @@ layout-mobile .detailPagePrimaryContent {
     }
   }
   @media all and (max-width: 35.99em){
+    .detailLogo {
+      position: absolute;
+      left: 4% !important;
+      top: 59vw !important;
+      width: 23em !important;
+      height: 23vh !important;
+    }
     .listItemImage.listItemImage-large.itemAction.lazy {
       margin-top: -1em !important;
       margin-left: -0.8em !important;
@@ -3239,6 +3251,15 @@ layout-mobile .detailPagePrimaryContent {
       }
     .layout-mobile .listViewUserDataButtons {
       display: flex !important;
+    }
+    
+    .layout-mobile .itemName.infoText.parentNameLast {
+      color: rgba(var(--accent));
+    }
+    .layout-mobile .itemBackdrop {
+      height: 60vh;
+      margin-top: 2px;
+      background-position: 50%;
     }
     .layout-mobile .listViewUserDataButtons .listItemButton.paper-icon-button-light.emby-button {
       display: none !important;
@@ -3275,8 +3296,39 @@ layout-mobile .detailPagePrimaryContent {
     .layout-mobile .studiosGroup,
     #seriesAirTime {
       display: none;
-      }
+    }
   }
+
+/* --- (Galaxy S24) (Galaxy S24 Ultra) --- */
+@media only screen and (max-width: 35.99em) and (min-height: 42em) and (max-height: 49.99em) and (orientation: portrait) {
+ .detailLogo {
+  position: absolute;
+  left: 4% !important;
+  top: 59vw !important;
+  width: 23em !important;
+  height: 19vh !important;
+ }
+}
+/* --- (iPhone 12 Pro) (iPhone 15) (AQUOS sense8) (Galaxy S24 Ultra Full) --- */
+@media only screen and (max-width: 35.99em) and (min-height: 50em) and (max-height: 55.99em) and (orientation: portrait) {
+.detailLogo {
+   position: absolute;
+   left: 4% !important;
+   top: 75vw !important;
+   width: 24em !important;
+   height: 19vh !important;
+ }
+}
+/* --- (iPhone XR) (iPhone 14 Pro Max) (AQUOS sense8) (Galaxy S20 Ultra) --- */
+@media only screen and (max-width: 35.99em) and (min-height: 56em) and (max-height: 59.99em) and (orientation: portrait) {
+.detailLogo {
+   position: absolute;
+   left: 3% !important;
+   top: 75vw !important;
+   width: 27em !important;
+   height: 19vh !important;
+ }
+}
 /* fix for title being too high when there is no logo */  
   .nameContainer .itemName.infoText.parentNameLast > bdi {
     position: relative;
@@ -3550,7 +3602,7 @@ layout-mobile .detailPagePrimaryContent {
   @media (min-width: 60em) and (orientation: landscape) { 
     .layout-mobile .itemBackdrop {
       height: 80vh;
-  }
+    }
     .layout-mobile .detailLogo {
         display: block;
         width: 34em;
