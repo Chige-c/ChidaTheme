@@ -63,7 +63,7 @@ h4 {
 -webkit-filter:none!important;
 box-shadow:0 0 20px #000;
 filter:none!important;
-transform:scale(1.1)!important
+transform:scale(1.07)!important
 }
 .activeDevices .card {
   transform: none !important;
@@ -3759,4 +3759,5 @@ layout-mobile .detailPagePrimaryContent {
      margin-top: -4.8em !important;
   }
 }
+
 
