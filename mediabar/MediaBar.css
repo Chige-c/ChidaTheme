@@ -57,7 +57,7 @@
    margin-top: -0.7em !important;
 }
 
-.card,.homeLibraryButton {
+.card .homeLibraryButton {
    margin-right:10px
 }
 
@@ -624,6 +624,7 @@
   display: none !important;
 } 
 }
+
 
 
 
