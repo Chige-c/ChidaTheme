@@ -2,6 +2,18 @@
 /* --- MediaBar --- */
 
 
+
+/* --- 再生ボタン --- */
+.detailButton.btnPlay.play-button:after {
+   content: "今すぐ観る";
+}
+.play-text {
+ display: none !important;
+}
+
+
+
+
 /* --- 上のやつ --- */
 .layout-desktop .gradient-overlay {
   background: linear-gradient(
@@ -624,6 +636,7 @@
   display: none !important;
 } 
 }
+
 
 
 
