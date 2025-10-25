@@ -566,14 +566,11 @@ option {
 }
 
 /*商品の詳細ページにロゴが表示されている場合は、商品のタイトルを非表示にします*/
-.layout-desktop #itemDetailPage .itemName.infoText.parentNameLast > bdi:nth-child(1) {
+#itemDetailPage .itemName.infoText.originalTitle {
   display: none;
 }
-.layout-desktop #itemDetailPage .itemName.infoText.originalTitle {
-  display: none;
-}
-.layout-desktop .hide+.detailPageWrapperContainer .itemName > bdi:nth-child(1) {
-  display: block !important;
+.nameContainer {
+  color: rgba(var(--accent));
 }
 
 /*単一のエピソードのリンクバックタイトルにも同じことを行います*/
@@ -3238,6 +3235,7 @@ layout-mobile .detailPagePrimaryContent {
       margin-top: 0.2em !important;
       margin-left: -1.0em !important;
       width: 100% !important;
+      height: 12vh;
       }
     .listItem-content {
       margin: 0.5em;
@@ -3759,5 +3757,4 @@ layout-mobile .detailPagePrimaryContent {
      margin-top: -4.8em !important;
   }
 }
-
 
