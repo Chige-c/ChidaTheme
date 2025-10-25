@@ -61,9 +61,7 @@
 .backdrop-overlay {
   background-color: rgba(0, 0, 0, 0);
 }
-.backdrop-container {
-  filter: brightness(0.999);
-}
+
 
 .section0 .emby-scrollbuttons.padded-right {
    margin-top: -0.7em !important;
@@ -145,7 +143,7 @@
 }
 /*  ----- (min-width: 64em) (Ipad 12.9~13インチ:縦) ----- */
 @media only screen and (min-width: 64em) and (max-width: 64.9em) and (orientation: portrait) {
-#slides-container .backdrop.high-quality.animate {
+#slides-container .backdrop.high-quality {
   width: 100vw;
   height: 50vh;
   margin-top: 27em !important;
@@ -197,7 +195,7 @@
 .info-container,
 .genre,
 .button-container,
-#slides-container .backdrop.high-quality.animate {
+#slides-container .backdrop.high-quality {
   margin-top: 5em !important;
 }
 
@@ -228,7 +226,7 @@
 .logo-container {
   width: 30vw;
 }
-#slides-container .backdrop.high-quality.animate {
+#slides-container .backdrop.high-quality {
   margin-top: 18em;
   width: 100vw; 
   height: 80vh;
@@ -298,7 +296,7 @@
 .sections.homeSectionsContainer {
   margin-top: -9em;
 }
-#slides-container .backdrop.high-quality.animate {
+#slides-container .backdrop.high-quality {
   margin-top: 14em;
   width: 100vw; 
   height: 80vh;
@@ -322,7 +320,7 @@
 
 @media only screen and (min-width: 48em) and (max-width: 59.99em) and (min-height: 56em) and (orientation: portrait) {
 
-#slides-container .backdrop.high-quality.animate {
+#slides-container .backdrop.high-quality {
   width: 100vw;
   height: 43vh;
   margin-top: 27em !important;
@@ -365,7 +363,7 @@
 }
 @media only screen and (min-width: 48em) and (max-width: 59.99em) and (max-height: 45.99em) and (orientation: portrait) {
 
-#slides-container .backdrop.high-quality.animate {
+#slides-container .backdrop.high-quality {
   margin-top: 17em !important;
 }
 .dots-container,
@@ -411,7 +409,7 @@
 .dots-container {
   margin-top: 11em !important;
 }
-#slides-container .backdrop.high-quality.animate {
+#slides-container .backdrop.high-quality {
   height: 400px !important;
   margin-top: 33em !important;
 }
@@ -451,7 +449,7 @@
 .dots-container {
   margin-top: 9em !important;
 }
-#slides-container .backdrop.high-quality.animate {
+#slides-container .backdrop.high-quality {
   height: 50vh !important;
   margin-top: 21.5em !important;
 }
@@ -469,6 +467,7 @@
 }
 .button-container {
   margin-top: 1.5em;
+  margin-left: -5vw;
 }
 #slides-container .arrow  {
   margin-top: 10em;
@@ -499,7 +498,7 @@
 .dots-container {
   margin-top: 9em !important;
 }
-#slides-container .backdrop.high-quality.animate {
+#slides-container .backdrop.high-quality {
   height: 48vh !important;
   margin-top: 21.5em !important;
 }
@@ -517,6 +516,7 @@
 }
 .button-container {
   margin-top: 2em;
+  margin-left: -5vw;
 }
 #slides-container .arrow  {
   margin-top: 10em;
@@ -537,17 +537,17 @@
 } 
 }
 
-/* --- (Galaxy S24) (Galaxy S24 Ultra) --- */
+/* --- (Galaxy S24 Real) (Galaxy S24 Ultra) --- */
 @media only screen and (max-width: 35.99em) and (min-height: 42em) and (max-height: 49.99em) and (orientation: portrait) {
 .logo-container {
-  margin-top: 7em !important;
+  margin-top: 6.5em !important;
   left: 28vw;
   width: 50vw;
 }
 .dots-container {
   margin-top: 5.1em !important;
 }
-#slides-container .backdrop.high-quality.animate {
+#slides-container .backdrop.high-quality {
   height: 32vh !important;
   margin-top: 21em !important;
 }
@@ -564,7 +564,7 @@
 }
 .button-container {
   margin-top: -2em;
-  left: 23vw;
+  left: 43vw;
 }
 
 .button-container .detailButton.detail-button  {
@@ -598,7 +598,7 @@
 .dots-container {
   margin-top: 9em !important;
 }
-#slides-container .backdrop.high-quality.animate {
+#slides-container .backdrop.high-quality {
   height: 45vh !important;
   margin-top: 21.5em !important;
 }
@@ -616,6 +616,7 @@
 }
 .button-container {
   margin-top: 3.3em;
+  margin-left: -7vw;
 }
 #slides-container .arrow  {
   margin-top: 12em;
@@ -636,6 +637,8 @@
   display: none !important;
 } 
 }
+
+
 
 
 
